@@ -79,3 +79,9 @@ C:\AddressBook\AddressBook\obj\Debug\net6.0\refint\AddressBook.dll
 C:\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.pdb
 C:\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.genruntimeconfig.cache
 C:\AddressBook\AddressBook\obj\Debug\net6.0\ref\AddressBook.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\AutoMapper.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\FluentValidation.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.MvcApplicationPartsAssemblyInfo.cs

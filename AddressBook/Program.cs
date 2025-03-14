@@ -8,6 +8,9 @@ using RepositoryLayer.Interface;
 
 using System.Collections.Generic;
 using RepositoryLayer;
+using AutoMapper;
+using BusinessLayer.AddressBookValidator;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,9 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IAddressBookBL, AddressBookBL>();
 
 builder.Services.AddScoped<IAddressBookRL, AddressBookRL>();
+
+builder.Services.AddAutoMapper(typeof(BusinessLayer.AutoMapperProfile.AutoMapperProfile));
+builder.Services.AddValidatorsFromAssemblyContaining<AddressBookValidator>();
 
 
 

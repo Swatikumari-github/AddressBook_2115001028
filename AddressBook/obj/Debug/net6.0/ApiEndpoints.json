@@ -1,0 +1,91 @@
+[
+  {
+    "ContainingType": "AddressBook.Controllers.AddressBookController",
+    "Method": "Get",
+    "RelativePath": "api/AddressBook",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AddressBookController",
+    "Method": "AddContact",
+    "RelativePath": "api/AddressBook/AddContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addressBookDTO",
+        "Type": "ModelLayer.DTO.AddressBookDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AddressBookController",
+    "Method": "DeleteContact",
+    "RelativePath": "api/AddressBook/DeleteContact/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AddressBookController",
+    "Method": "GetAllContacts",
+    "RelativePath": "api/AddressBook/GetAllContacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AddressBookController",
+    "Method": "GetContactById",
+    "RelativePath": "api/AddressBook/GetContactById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AddressBookController",
+    "Method": "UpdateContact",
+    "RelativePath": "api/AddressBook/UpdateContact/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "addressBookDTO",
+        "Type": "ModelLayer.DTO.AddressBookDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -16,11 +16,13 @@ namespace RepositoryLayer.Entity
         public string Email { get; set; }
         public string Phone { get; set; }
 
-        [ForeignKey("Users")]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }  // Nu
 
-        // Navigation Property
-        public UserEntity User { get; set; }
+        //[ForeignKey("Users")]
+        //public int UserId { get; set; }
+
+        //// Navigation Property
+        //public UserEntity User { get; set; }
 
     }
 }

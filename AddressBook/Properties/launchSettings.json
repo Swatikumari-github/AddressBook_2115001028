@@ -10,19 +10,19 @@
   },
   "profiles": {
     "AddressBook": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "AddressBook",
-      "applicationUrl": "https://localhost:7116;http://localhost:5299",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "commandName": "Project",
+        "dotnetRunMessages": true,
+        "launchBrowser": true,
+        "launchUrl": "api/addressbook",
+        "applicationUrl": "https://localhost:7116",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        }
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/addressbook",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
