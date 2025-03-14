@@ -1,11 +1,23 @@
+using BusinessLayer.Interface;
+using BusinessLayer.Service;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
+
 using RepositoryLayer.Context;
+using RepositoryLayer.Interface;
+
+using System.Collections.Generic;
+using RepositoryLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IAddressBookBL, AddressBookBL>();
+
+builder.Services.AddScoped<IAddressBookRL, AddressBookRL>();
+
 
 
 // Database Connection

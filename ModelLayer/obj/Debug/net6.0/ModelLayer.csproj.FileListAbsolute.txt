@@ -1,0 +1,15 @@
+C:\AddressBook\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+C:\AddressBook\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\AddressBook\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\AddressBook\ModelLayer\bin\Debug\net6.0\RepositoryLayer.dll
+C:\AddressBook\ModelLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.AssemblyReference.cache
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.Up2Date
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
