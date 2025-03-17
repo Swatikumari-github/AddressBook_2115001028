@@ -1,9 +1,12 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using BusinessLayer.Interface;
+using ModelLayer.DTO;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 
@@ -13,31 +16,39 @@ namespace BusinessLayer.Service
     {
 
         private readonly IAddressBookRL _addressBookRL;
-
-        public AddressBookBL(IAddressBookRL addressBookRL)
+        private readonly IMapper _mapper;
+        public AddressBookBL(IAddressBookRL addressBookRL, IMapper mapper)
         {
             _addressBookRL = addressBookRL;
+            _mapper = mapper;
         }
 
-        public bool AddContact(AddressBookEntity contact)
+        public bool AddContact(AddressBookDTO addressBookDTO, int userId)
         {
-            return _addressBookRL.AddContact(contact);
+            var entity = _mapper.Map<AddressBookEntity>(addressBookDTO);
+
+            return _addressBookRL.AddContact(entity, userId);
         }
 
-        public List<AddressBookEntity> GetAllContacts()
+        public List<AddressBookDTO> GetAllContacts()
         {
-            return _addressBookRL.GetAllContacts();
+            var entityList = _addressBookRL.GetAllContacts();
+            return _mapper.Map<List<AddressBookDTO>>(entityList);
         }
 
-        public AddressBookEntity GetContactById(int id)
+
+        public AddressBookDTO GetContactById(int id)
         {
-            return _addressBookRL.GetContactById(id);
+            var entity = _addressBookRL.GetContactById(id);
+            return _mapper.Map<AddressBookDTO>(entity);
         }
 
-        public bool UpdateContact(int id, AddressBookEntity updatedContact)
+        public bool UpdateContact(int id, AddressBookDTO addressBookDTO, int userId)
         {
-            return _addressBookRL.UpdateContact(id, updatedContact);
+            var entity = _mapper.Map<AddressBookEntity>(addressBookDTO);
+            return _addressBookRL.UpdateContact(id, entity, userId);
         }
+
 
         public bool DeleteContact(int id)
         {

@@ -85,3 +85,9 @@ C:\AddressBook\AddressBook\bin\Debug\net6.0\FluentValidation.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.MvcApplicationPartsAssemblyInfo.cs
+C:\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.sourcelink.json
+C:\AddressBook\AddressBook\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.Bcl.Memory.dll
+C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll

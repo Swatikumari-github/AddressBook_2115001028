@@ -1,6 +1,10 @@
+
+
 using AutoMapper;
 using BusinessLayer.Interface;
+using BusinessLayer.Service;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.DTO;
 using ModelLayer.Model;
@@ -8,10 +12,13 @@ using RepositoryLayer.Entity;
 
 namespace AddressBook.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class AddressBookController : ControllerBase
     {
+
+
         private readonly IAddressBookBL _addressBookBL;
         private readonly IMapper _mapper;
         private readonly IValidator<AddressBookDTO> _validator;
@@ -22,16 +29,16 @@ namespace AddressBook.Controllers
             _mapper = mapper;
             _validator = validator;
         }
-
         [HttpGet]
         public IActionResult Get()
         {
             return Ok("AddressBook route is working.");
         }
 
-        [HttpPost("AddContact")]
-        public IActionResult AddContact([FromBody] AddressBookDTO addressBookDTO)
+        [HttpPost("AddContact/{userId}")]
+        public IActionResult AddContact([FromBody] AddressBookDTO addressBookDTO, int userId)
         {
+            // Validate DTO
             var validationResult = _validator.Validate(addressBookDTO);
             if (!validationResult.IsValid)
             {
@@ -43,8 +50,8 @@ namespace AddressBook.Controllers
                 });
             }
 
-            var entity = _mapper.Map<AddressBookEntity>(addressBookDTO);
-            var result = _addressBookBL.AddContact(entity);
+            var result = _addressBookBL.AddContact(addressBookDTO, userId);
+
             return Ok(new ResponseModel<bool>
             {
                 Success = result,
@@ -53,16 +60,17 @@ namespace AddressBook.Controllers
             });
         }
 
+
+
         [HttpGet("GetAllContacts")]
         public IActionResult GetAllContacts()
         {
             var data = _addressBookBL.GetAllContacts();
-            var result = _mapper.Map<List<AddressBookDTO>>(data);
             return Ok(new ResponseModel<List<AddressBookDTO>>
             {
                 Success = true,
                 Message = "Contacts fetched successfully",
-                Data = result
+                Data = data
             });
         }
 
@@ -70,17 +78,16 @@ namespace AddressBook.Controllers
         public IActionResult GetContactById(int id)
         {
             var data = _addressBookBL.GetContactById(id);
-            var result = _mapper.Map<AddressBookDTO>(data);
             return Ok(new ResponseModel<AddressBookDTO>
             {
-                Success = result != null,
-                Message = result != null ? "Contact found" : "Contact not found",
-                Data = result
+                Success = data != null,
+                Message = data != null ? "Contact found" : "Contact not found",
+                Data = data
             });
         }
 
-        [HttpPut("UpdateContact/{id}")]
-        public IActionResult UpdateContact(int id, [FromBody] AddressBookDTO addressBookDTO)
+        [HttpPut("UpdateContact/{userId}")]
+        public IActionResult UpdateContact(int id, [FromBody] AddressBookDTO addressBookDTO, int userId)
         {
             var validationResult = _validator.Validate(addressBookDTO);
             if (!validationResult.IsValid)
@@ -93,15 +100,14 @@ namespace AddressBook.Controllers
                 });
             }
 
-            var entity = _mapper.Map<AddressBookEntity>(addressBookDTO);
-            var result = _addressBookBL.UpdateContact(id, entity);
+            var result = _addressBookBL.UpdateContact(id, addressBookDTO, userId);
             return Ok(new ResponseModel<bool>
             {
                 Success = result,
-                Message = result ? "Contact updated successfully" : "Failed to update contact",
-                Data = result
+                Message = result ? "Contact updated successfully" : "Failed to update contact"
             });
         }
+
 
         [HttpDelete("DeleteContact/{id}")]
         public IActionResult DeleteContact(int id)
@@ -110,9 +116,9 @@ namespace AddressBook.Controllers
             return Ok(new ResponseModel<bool>
             {
                 Success = result,
-                Message = result ? "Contact deleted successfully" : "Failed to delete contact",
-                Data = result
+                Message = result ? "Contact deleted successfully" : "Failed to delete contact"
             });
         }
     }
+
 }

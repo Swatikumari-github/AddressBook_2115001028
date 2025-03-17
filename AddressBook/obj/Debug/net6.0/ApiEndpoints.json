@@ -12,7 +12,7 @@
   {
     "ContainingType": "AddressBook.Controllers.AddressBookController",
     "Method": "AddContact",
-    "RelativePath": "api/AddressBook/AddContact",
+    "RelativePath": "api/AddressBook/AddContact/{userId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -20,6 +20,11 @@
       {
         "Name": "addressBookDTO",
         "Type": "ModelLayer.DTO.AddressBookDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -70,7 +75,7 @@
   {
     "ContainingType": "AddressBook.Controllers.AddressBookController",
     "Method": "UpdateContact",
-    "RelativePath": "api/AddressBook/UpdateContact/{id}",
+    "RelativePath": "api/AddressBook/UpdateContact/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -78,11 +83,48 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "addressBookDTO",
         "Type": "ModelLayer.DTO.AddressBookDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLoginDTO",
+        "Type": "ModelLayer.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDTO",
+        "Type": "ModelLayer.DTO.RegisterDTO",
         "IsRequired": true
       }
     ],
