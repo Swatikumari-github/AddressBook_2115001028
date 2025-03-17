@@ -14,6 +14,9 @@ namespace BusinessLayer.AutoMapperProfile
         public AutoMapperProfile()
         {
             CreateMap<AddressBookEntity, AddressBookDTO>().ReverseMap();
+            CreateMap<UsersEntity, RegisterDTO>().ReverseMap();
+            CreateMap<LoginDTO, UsersEntity>();
+
         }
     }
 }
