@@ -76,6 +76,51 @@ namespace AddressBook.Controllers
                 Data = token
             });
         }
+        //uc6 ka kaam
+        [HttpPost("forgot-password")]
+        public IActionResult ForgotPassword([FromBody] ForgotPasswordDTO forgotPasswordDTO)
+        {
+            var result = _userBL.SendPasswordResetEmail(forgotPasswordDTO.Email);
+            if (!result)
+            {
+                return NotFound(new ResponseModel<string>
+                {
+                    Success = false,
+                    Message = "Email not found",
+                    Data = null
+                });
+            }
+
+            return Ok(new ResponseModel<string>
+            {
+                Success = true,
+                Message = "Password reset email sent successfully",
+                Data = null
+            });
+        }
+
+        [HttpPost("reset-password")]
+        public IActionResult ResetPassword([FromBody] ResetPasswordDTO resetPasswordDTO)
+        {
+            var result = _userBL.ResetPassword(resetPasswordDTO);
+            if (!result)
+            {
+                return BadRequest(new ResponseModel<string>
+                {
+                    Success = false,
+                    Message = "Invalid token or expired",
+                    Data = null
+                });
+            }
+
+            return Ok(new ResponseModel<string>
+            {
+                Success = true,
+                Message = "Password reset successfully",
+                Data = null
+            });
+        }
+
     }
 }
 

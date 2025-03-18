@@ -15,8 +15,9 @@ namespace RepositoryLayer.Entity
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-
-
+        //uc6 code
+        public string ? ResetToken { get; set; }
+        public DateTime? ResetTokenExpiration { get; set; }
 
         // Navigation Property
         public ICollection<AddressBookEntity> AddressBookEntries { get; set; } = new List<AddressBookEntity>();

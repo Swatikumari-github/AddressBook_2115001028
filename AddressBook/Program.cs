@@ -31,6 +31,7 @@ builder.Services.AddScoped<IUserRL, UserRL>();
 builder.Services.AddScoped<IValidator<RegisterDTO>, RegisterValidator>();
 
 builder.Services.AddAutoMapper(typeof(BusinessLayer.AutoMapperProfile.AutoMapperProfile));
+builder.Services.AddSingleton<EmailService>();
 builder.Services.AddValidatorsFromAssemblyContaining<AddressBookValidator>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

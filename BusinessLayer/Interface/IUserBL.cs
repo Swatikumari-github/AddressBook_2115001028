@@ -14,6 +14,11 @@ namespace BussinessLayer.Interface
         bool Register(RegisterDTO registerDTO);
 
         string Login(LoginDTO loginDTO);
+        // Send Password Reset Email
+        bool SendPasswordResetEmail(string email);
+
+        // Reset Password using Token
+        bool ResetPassword(ResetPasswordDTO resetPasswordDTO);
 
 
     }
