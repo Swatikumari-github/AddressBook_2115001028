@@ -8,9 +8,9 @@ C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConf
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.sourcelink.json
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.Up2Date
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
 C:\AddressBook\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
-C:\AddressBook\ModelLayer\obj\Debug\net6.0\ModelLayer.sourcelink.json

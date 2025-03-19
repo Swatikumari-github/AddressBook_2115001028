@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook", "AddressBook\AddressBook.csproj", "{EA2608F3-1441-4740-BEDC-88E20D90D409}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{F0EF5C79-D27C-46A1-B270-7C8EF255E2A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{816E1BE3-1564-4599-943F-B85C166EA679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabitMQLayer", "RabitMQLayer\RabitMQLayer.csproj", "{2B230EBE-64F2-4E56-9575-C896914321E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{816E1BE3-1564-4599-943F-B85C166EA679}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{816E1BE3-1564-4599-943F-B85C166EA679}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{816E1BE3-1564-4599-943F-B85C166EA679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B230EBE-64F2-4E56-9575-C896914321E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B230EBE-64F2-4E56-9575-C896914321E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B230EBE-64F2-4E56-9575-C896914321E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B230EBE-64F2-4E56-9575-C896914321E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
