@@ -33,13 +33,18 @@
   {
     "ContainingType": "AddressBook.Controllers.AddressBookController",
     "Method": "DeleteContact",
-    "RelativePath": "api/AddressBook/DeleteContact/{id}",
+    "RelativePath": "api/AddressBook/DeleteContact/{id}/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -49,11 +54,17 @@
   {
     "ContainingType": "AddressBook.Controllers.AddressBookController",
     "Method": "GetAllContacts",
-    "RelativePath": "api/AddressBook/GetAllContacts",
+    "RelativePath": "api/AddressBook/GetAllContacts/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -75,7 +86,7 @@
   {
     "ContainingType": "AddressBook.Controllers.AddressBookController",
     "Method": "UpdateContact",
-    "RelativePath": "api/AddressBook/UpdateContact/{userId}",
+    "RelativePath": "api/AddressBook/UpdateContact/{id}/{userId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -83,7 +94,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "addressBookDTO",
@@ -93,6 +104,22 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgotPasswordDTO",
+        "Type": "ModelLayer.DTO.ForgotPasswordDTO",
         "IsRequired": true
       }
     ],
@@ -125,6 +152,22 @@
       {
         "Name": "registerDTO",
         "Type": "ModelLayer.DTO.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AddressBook.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDTO",
+        "Type": "ModelLayer.DTO.ResetPasswordDTO",
         "IsRequired": true
       }
     ],

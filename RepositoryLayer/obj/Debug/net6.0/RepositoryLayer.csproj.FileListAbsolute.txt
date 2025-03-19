@@ -7,9 +7,9 @@ C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.GeneratedMSBuild
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfoInputs.cache
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfo.cs
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.sourcelink.json
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.dll
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.genruntimeconfig.cache
 C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll
-C:\AddressBook\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.sourcelink.json
