@@ -61,7 +61,6 @@ C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\NLog.dll
@@ -70,9 +69,6 @@ C:\AddressBook\AddressBook\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\StackExchange.Redis.dll
-C:\AddressBook\AddressBook\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\AddressBook\AddressBook\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\AddressBook\AddressBook\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\System.Collections.Immutable.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\AddressBook\AddressBook\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll

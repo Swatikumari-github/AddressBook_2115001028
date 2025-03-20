@@ -77,245 +77,6 @@
 
 
 //app.Run();
-//using BusinessLayer.Interface;
-//using BusinessLayer.Service;
-//using Microsoft.EntityFrameworkCore;
-//using System.Text;
-//using RepositoryLayer.Context;
-//using RepositoryLayer.Interface;
-//using RepositoryLayer;
-//using AutoMapper;
-//using BusinessLayer.AddressBookValidator;
-//using FluentValidation;
-//using BussinessLayer.Interface;
-//using BussinessLayer.Service;
-//using RepositoryLayer.Service;
-//using Microsoft.AspNetCore.Authentication.JwtBearer;
-//using Microsoft.IdentityModel.Tokens;
-//using ModelLayer.DTO;
-//using StackExchange.Redis;
-//using RabbitMQ.Client;
-//using RabitMQLayer.Producer;
-//using NLog;
-//using NLog.Web;
-//using RabitMQLayer;
-
-//var builder = WebApplication.CreateBuilder(args);
-
-//builder.Logging.ClearProviders();
-//builder.Host.UseNLog();
-
-
-
-//// Add services to the container.
-//builder.Services.AddControllers();
-
-//// Register Address Book services
-//builder.Services.AddScoped<IAddressBookBL, AddressBookBL>();
-//builder.Services.AddScoped<IAddressBookRL, AddressBookRL>();
-
-//// Register User services
-//builder.Services.AddScoped<IUserBL, UserBL>();
-//builder.Services.AddScoped<IUserRL, UserRL>();
-
-//// Register DTO validators
-//builder.Services.AddScoped<IValidator<RegisterDTO>, RegisterValidator>();
-
-//// Register AutoMapper for DTO mappings
-//builder.Services.AddAutoMapper(typeof(BusinessLayer.AutoMapperProfile.AutoMapperProfile));
-
-//// Register email service (if required)
-//builder.Services.AddSingleton<EmailService>();
-
-//// Add FluentValidation for AddressBookDTO
-//builder.Services.AddValidatorsFromAssemblyContaining<AddressBookValidator>();
-
-
-
-
-//// Authentication configuration using JWT Bearer
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options =>
-//    {
-//        options.TokenValidationParameters = new TokenValidationParameters
-//        {
-//            ValidateIssuer = true,
-//            ValidateAudience = true,
-//            ValidateLifetime = true,
-//            ValidateIssuerSigningKey = true,
-//            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//            ValidAudience = builder.Configuration["Jwt:Audience"],
-//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-//        };
-//    });
-
-//var redisConnectionString = builder.Configuration.GetSection("Redis:ConnectionString").Value;
-//builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnectionString));
-//builder.Services.AddSingleton<RedisCacheService>();
-
-
-//// Database Connection - UserContext for user-related dataSystem.ArgumentNullException: 'Value cannot be null. (Parameter 'configuration')'
-
-//var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
-//builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer(connectionString));
-
-//// RabbitMQ Configuration
-//builder.Services.AddSingleton<IConnectionFactory>(sp =>
-//{
-//    return new ConnectionFactory()
-//    {
-//        HostName = builder.Configuration["RabbitMQ:HostName"],
-//        UserName = builder.Configuration["RabbitMQ:UserName"],
-//        Password = builder.Configuration["RabbitMQ:Password"],
-//        Port = int.Parse(builder.Configuration["RabbitMQ:Port"])
-//    };
-//});
-//builder.Services.AddSingleton<RabbitMQProducer>();
-//builder.Services.AddSingleton<RabbitMQService>();
-
-//// Build the app
-//var app = builder.Build();
-
-//// Configure the HTTP request pipeline.
-//app.UseHttpsRedirection();
-
-//app.UseRouting();
-
-//// Enable Authentication and Authorization middlewares
-//app.UseAuthentication();
-//app.UseAuthorization();
-
-//// Configure endpoints to map the controllers
-//app.UseEndpoints(endpoints =>
-//{
-//    endpoints.MapControllers(); // Register all controllers, including AddressBookController and UserController
-//});
-
-//app.Run();
-
-
-//using BusinessLayer.Interface;
-//using BusinessLayer.Service;
-//using Microsoft.EntityFrameworkCore;
-//using System.Text;
-//using RepositoryLayer.Context;
-//using RepositoryLayer.Interface;
-//using RepositoryLayer;
-//using AutoMapper;
-//using BusinessLayer.AddressBookValidator;
-//using FluentValidation;
-//using BussinessLayer.Interface;
-//using BussinessLayer.Service;
-//using RepositoryLayer.Service;
-//using Microsoft.AspNetCore.Authentication.JwtBearer;
-//using Microsoft.IdentityModel.Tokens;
-//using ModelLayer.DTO;
-//using StackExchange.Redis;
-//using RabbitMQ.Client;
-//using RabitMQLayer.Producer;
-//using NLog;
-//using NLog.Web;
-//using RabitMQLayer;
-
-//var builder = WebApplication.CreateBuilder(args);
-
-//builder.Logging.ClearProviders();
-//builder.Host.UseNLog();
-
-
-
-//// Add services to the container.
-//builder.Services.AddControllers();
-////builder.Services.AddEndpointsApiExplorer();
-////builder.Services.AddSwaggerGen();
-
-//// Register Address Book services
-//builder.Services.AddScoped<IAddressBookBL, AddressBookBL>();
-//builder.Services.AddScoped<IAddressBookRL, AddressBookRL>();
-
-//// Register User services
-//builder.Services.AddScoped<IUserBL, UserBL>();
-//builder.Services.AddScoped<IUserRL, UserRL>();
-
-//// Register DTO validators
-//builder.Services.AddScoped<IValidator<RegisterDTO>, RegisterValidator>();
-
-//// Register AutoMapper for DTO mappings
-//builder.Services.AddAutoMapper(typeof(BusinessLayer.AutoMapperProfile.AutoMapperProfile));
-
-//// Register email service (if required)
-//builder.Services.AddSingleton<EmailService>();
-
-//// Add FluentValidation for AddressBookDTO
-//builder.Services.AddValidatorsFromAssemblyContaining<AddressBookValidator>();
-
-
-
-
-
-
-//// Authentication configuration using JWT Bearer
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options =>
-//    {
-//        options.TokenValidationParameters = new TokenValidationParameters
-//        {
-//            ValidateIssuer = true,
-//            ValidateAudience = true,
-//            ValidateLifetime = true,
-//            ValidateIssuerSigningKey = true,
-//            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//            ValidAudience = builder.Configuration["Jwt:Audience"],
-//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-//        };
-//    });
-
-//var redisConnectionString = builder.Configuration.GetSection("Redis:ConnectionString").Value;
-//builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnectionString));
-//builder.Services.AddSingleton<RedisCacheService>();
-
-
-//// Database Connection - UserContext for user-related dataSystem.ArgumentNullException: 'Value cannot be null. (Parameter 'configuration')'
-
-//var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
-//builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer(connectionString));
-
-//// RabbitMQ Configuration
-//builder.Services.AddSingleton<IConnectionFactory>(sp =>
-//{
-//    return new ConnectionFactory()
-//    {
-//        HostName = builder.Configuration["RabbitMQ:HostName"],
-//        UserName = builder.Configuration["RabbitMQ:UserName"],
-//        Password = builder.Configuration["RabbitMQ:Password"],
-//        Port = int.Parse(builder.Configuration["RabbitMQ:Port"])
-//    };
-//});
-//builder.Services.AddSingleton<RabbitMQProducer>();
-//builder.Services.AddSingleton<RabbitMQService>();
-//// Configure the HTTP request pipeline.
-
-
-//// Build the app
-//var app = builder.Build();
-////app.UseSwagger();//json file ke liye
-////app.UseSwaggerUI();
-//// Configure the HTTP request pipeline.
-//app.UseHttpsRedirection();
-
-//app.UseRouting();
-
-//// Enable Authentication and Authorization middlewares
-//app.UseAuthentication();
-//app.UseAuthorization();
-
-//// Configure endpoints to map the controllers
-//app.UseEndpoints(endpoints =>
-//{
-//    endpoints.MapControllers(); // Register all controllers, including AddressBookController and UserController
-//});
-
-//app.Run();
 using BusinessLayer.Interface;
 using BusinessLayer.Service;
 using Microsoft.EntityFrameworkCore;
@@ -338,24 +99,16 @@ using RabitMQLayer.Producer;
 using NLog;
 using NLog.Web;
 using RabitMQLayer;
-using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 
+
+
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "AddressBook API",
-        Version = "v1"
-    });
-});
 
 // Register Address Book services
 builder.Services.AddScoped<IAddressBookBL, AddressBookBL>();
@@ -377,6 +130,9 @@ builder.Services.AddSingleton<EmailService>();
 // Add FluentValidation for AddressBookDTO
 builder.Services.AddValidatorsFromAssemblyContaining<AddressBookValidator>();
 
+
+
+
 // Authentication configuration using JWT Bearer
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -397,7 +153,9 @@ var redisConnectionString = builder.Configuration.GetSection("Redis:ConnectionSt
 builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnectionString));
 builder.Services.AddSingleton<RedisCacheService>();
 
-// Database Connection - UserContext for user-related data
+
+// Database Connection - UserContext for user-related dataSystem.ArgumentNullException: 'Value cannot be null. (Parameter 'configuration')'
+
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer(connectionString));
 
@@ -417,17 +175,6 @@ builder.Services.AddSingleton<RabbitMQService>();
 
 // Build the app
 var app = builder.Build();
-
-// Enable Swagger for development
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "AddressBook API v1");
-        c.RoutePrefix = "swagger";
-    });
-}
 
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
