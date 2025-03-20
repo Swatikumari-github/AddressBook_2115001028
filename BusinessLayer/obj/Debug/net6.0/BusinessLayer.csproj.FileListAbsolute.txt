@@ -2,8 +2,10 @@ C:\AddressBook\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
 C:\AddressBook\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
 C:\AddressBook\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
 C:\AddressBook\BusinessLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\AddressBook\BusinessLayer\bin\Debug\net6.0\RabitMQLayer.dll
 C:\AddressBook\BusinessLayer\bin\Debug\net6.0\RepositoryLayer.dll
 C:\AddressBook\BusinessLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\AddressBook\BusinessLayer\bin\Debug\net6.0\RabitMQLayer.pdb
 C:\AddressBook\BusinessLayer\bin\Debug\net6.0\RepositoryLayer.pdb
 C:\AddressBook\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
 C:\AddressBook\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,5 +18,3 @@ C:\AddressBook\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
 C:\AddressBook\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
 C:\AddressBook\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
 C:\AddressBook\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
-C:\AddressBook\BusinessLayer\bin\Debug\net6.0\RabitMQLayer.dll
-C:\AddressBook\BusinessLayer\bin\Debug\net6.0\RabitMQLayer.pdb
